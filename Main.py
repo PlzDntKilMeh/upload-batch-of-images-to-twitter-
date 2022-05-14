@@ -38,9 +38,10 @@ def upload_file():
     file_upload = 'temp_file.jpg'
     while True:
         try:
-            time.sleep(5)
+            sleep(5)
             response = api.media_upload(file_upload)
-        except:
+        except Exception as e:
+            print('Failed',e)
             continue
         break
     media_id = response.media_id
