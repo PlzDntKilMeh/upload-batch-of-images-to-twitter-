@@ -18,17 +18,6 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
-headers = {
-    'Authorization': Bearer,
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0',
-}
-
-params = (
-##    ('tweet.fields', 'created_at'),
-    ('expansions', 'author_id'),
-    ('user.fields', 'created_at'),
-    ('tweet.fields', 'referenced_tweets')
-)
 
 def set_size(file):
     x = 100
