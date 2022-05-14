@@ -36,7 +36,13 @@ def set_size(file):
 def upload_file():
     print('uploading')
     file_upload = 'temp_file.jpg'
-    response = api.media_upload(file_upload)
+    while True:
+        try:
+            time.sleep(5)
+            response = api.media_upload(file_upload)
+        except:
+            continue
+        break
     media_id = response.media_id
     medias = []
     medias.append(media_id)
